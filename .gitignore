@@ -1,0 +1,8 @@
+.DS_Store
+**/.DS_Store
+
+# Local review/source material not needed by the published site.
+review-gallery.html
+html5up-hyperspace/
+assets/gallery/
+assets/library/

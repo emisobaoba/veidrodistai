@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 760">
+  <defs>
+    <linearGradient id="bench" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#304148"/>
+      <stop offset="1" stop-color="#172029"/>
+    </linearGradient>
+    <linearGradient id="glassPanel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3fbfb"/>
+      <stop offset="1" stop-color="#8da4aa"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="760" fill="#f7f4ee"/>
+  <rect x="52" y="88" width="656" height="520" rx="34" fill="url(#bench)"/>
+  <rect x="108" y="134" width="342" height="342" rx="22" fill="url(#glassPanel)" stroke="#ffffff" stroke-width="8"/>
+  <path d="M154 174c73 28 158 31 254 8" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" opacity="0.42"/>
+  <rect x="488" y="142" width="92" height="278" rx="18" fill="#9fd2bd"/>
+  <rect x="602" y="142" width="48" height="278" rx="18" fill="#f4d58c"/>
+  <path d="M506 460c74 36 132 38 178 4" fill="none" stroke="#c86b55" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="504" cy="462" r="16" fill="#c86b55"/>
+  <circle cx="684" cy="464" r="16" fill="#c86b55"/>
+  <rect x="112" y="532" width="534" height="24" rx="12" fill="#ffffff" opacity="0.2"/>
+  <rect x="152" y="646" width="456" height="48" rx="24" fill="#d8d0c1"/>
+</svg>
