@@ -52,8 +52,8 @@ body {
 
 .hero-intro {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.35rem;
   max-width: 72rem;
   margin: 2.4rem 0 0;
   padding: 1.7rem 0 0;
