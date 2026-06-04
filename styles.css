@@ -284,8 +284,40 @@ input[type="button"] {
 }
 
 @media screen and (max-width: 736px) {
+  #banner {
+    min-height: auto;
+    text-align: center;
+  }
+
+  #banner::before {
+    display: none;
+  }
+
+  #banner .content {
+    display: block;
+    margin: 0;
+    max-width: none;
+    padding: 5.25rem 1.5rem 3rem !important;
+    text-align: center;
+    vertical-align: top;
+  }
+
   #banner .content header {
     text-align: center;
+  }
+
+  #banner .content header p {
+    max-width: none;
+  }
+
+  #banner .actions {
+    margin-top: 1.6rem;
+  }
+
+  .hero-intro {
+    gap: 0.85rem;
+    margin-top: 1.45rem;
+    padding-top: 1.15rem;
   }
 
   .gallery-grid {
