@@ -6,3 +6,8 @@ review-gallery.html
 html5up-hyperspace/
 assets/gallery/
 assets/library/
+!assets/library/
+assets/library/*
+!assets/library/Nuotraukos/
+assets/library/Nuotraukos/*
+!assets/library/Nuotraukos/Untitled-1.png

@@ -13,7 +13,7 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="html5up-landed/assets/css/main.css">
     <noscript><link rel="stylesheet" href="html5up-landed/assets/css/noscript.css"></noscript>
-    <link rel="stylesheet" href="styles.css?v=hero-layer-position">
+    <link rel="stylesheet" href="styles.css?v=gallery-even-rows">
   </head>
   <body class="is-preload landing">
     <div id="page-wrapper">
@@ -25,7 +25,7 @@
             <li><a href="#banner">Pradžia</a></li>
             <li><a href="#library">Gaminiai</a></li>
             <li><a href="#apie-mus">Apie mus</a></li>
-            <li><a href="#order" class="button primary">Užsakymas</a></li>
+            <li><a href="#order" class="button primary">Gauti pasiūlymą</a></li>
           </ul>
         </nav>
       </header>
@@ -36,7 +36,7 @@
           <header>
             <h2>LED veidrodžių gamyba</h2>
             <p>Namams ir verslui - lankstūs pasiūlymai visiems poreikiams</p>
-            <p>Voniai Prieškambariui Svetainei Biurui Salonui</p>
+            <p class="hero-categories">Voniai · Prieškambariui · Svetainei · Biurui · Salonui</p>
             <div class="hero-intro">
               <p>Individualūs gaminiai, pritaikyti Jūsų erdvėms</p>
               <p>Operatyvi ir draugiška komunikacija</p>
@@ -45,7 +45,7 @@
             </div>
             <ul class="actions">
               <li><a href="#library" class="button scrolly">Žiūrėti gaminius</a></li>
-              <li><a href="#order" class="button scrolly">Siųsti užklausą</a></li>
+              <li><a href="#order" class="button scrolly">Gauti pasiūlymą</a></li>
             </ul>
           </header>
         </div>
@@ -65,6 +65,7 @@
             <button type="button" data-gallery-mobile-next aria-label="Kitas gaminys">›</button>
           </div>
           <div class="gallery-grid" data-gallery-grid aria-label="Veidrodistai gaminių galerija"></div>
+          <button class="button gallery-more" type="button" data-gallery-more>Rodyti daugiau</button>
         </div>
       </section>
 
@@ -93,59 +94,31 @@
       <section id="order" class="wrapper style2 special fade">
         <div class="container">
           <header class="major">
-            <p class="eyebrow">Užsakymas</p>
-            <h2>Susisiekite dėl gamybos.</h2>
+            <p class="eyebrow">Gauti pasiūlymą</p>
+            <h2>Atsakysime per 24 valandas</h2>
             <p>Parašykite, kokio dydžio, formos ar apšvietimo veidrodžio reikia. Jei turite brėžinį, projekto nuotrauką ar kiekį, įrašykite tai žinutėje.</p>
+            <ul class="actions special contact-actions">
+              <li><a href="tel:+37062573250" class="button primary">Skambinti</a></li>
+              <li><a href="mailto:info@veidrodistai.lt" class="button">Rašyti el. paštu</a></li>
+            </ul>
           </header>
-          <div class="row gtr-150">
-            <div class="col-8 col-12-medium">
-              <form action="mailto:info@veidrodistai.lt" method="post" enctype="text/plain">
-                <div class="row gtr-uniform gtr-50">
-                  <div class="col-6 col-12-xsmall">
-                    <input type="text" name="name" id="name" autocomplete="name" placeholder="Vardas" required>
-                  </div>
-                  <div class="col-6 col-12-xsmall">
-                    <input type="email" name="email" id="email" autocomplete="email" placeholder="El. paštas" required>
-                  </div>
-                  <div class="col-6 col-12-xsmall">
-                    <input type="text" name="quantity" id="quantity" inputmode="numeric" placeholder="Kiekis, pvz.: 20 vnt.">
-                  </div>
-                  <div class="col-6 col-12-xsmall">
-                    <input type="text" name="location" id="location" placeholder="Miestas / šalis">
-                  </div>
-                  <div class="col-12">
-                    <textarea name="requirements" id="requirements" rows="6" placeholder="Dydis, forma, apšvietimas, rėmas, montavimo vieta, terminas"></textarea>
-                  </div>
-                  <div class="col-12">
-                    <button class="button primary" type="submit">Siųsti užklausą</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="col-4 col-12-medium">
-              <ul class="contact-list">
-                <li>
-                  <h3>El. paštas</h3>
-                  <a href="mailto:info@veidrodistai.lt">info@veidrodistai.lt</a>
-                </li>
-                <li>
-                  <h3>Telefonas</h3>
-                  <a href="tel:+37060000000">+370 600 00000</a>
-                </li>
-                <li>
-                  <h3>Veidrodistai</h3>
-                  <span>LED veidrodžiai namams ir verslui</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <ul class="contact-list contact-list-simple">
+            <li>
+              <h3>El. paštas</h3>
+              <a href="mailto:info@veidrodistai.lt">info@veidrodistai.lt</a>
+            </li>
+            <li>
+              <h3>Telefonas</h3>
+              <a href="tel:+37062573250">+370 625 73250</a>
+            </li>
+          </ul>
         </div>
       </section>
 
       <footer id="footer">
         <ul class="icons">
           <li><a href="mailto:info@veidrodistai.lt" class="icon solid alt fa-envelope"><span class="label">El. paštas</span></a></li>
-          <li><a href="tel:+37060000000" class="icon solid alt fa-phone"><span class="label">Telefonas</span></a></li>
+          <li><a href="tel:+37062573250" class="icon solid alt fa-phone"><span class="label">Telefonas</span></a></li>
           <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
           <li><a href="https://www.instagram.com/veidrodistai/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
           <li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
@@ -153,7 +126,7 @@
         </ul>
         <ul class="copyright">
           <li>Veidrodistai</li>
-          <li><a href="tel:+37060000000">+370 600 00000</a></li>
+          <li><a href="tel:+37062573250">+370 625 73250</a></li>
           <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
         </ul>
       </footer>
@@ -175,6 +148,6 @@
     <script src="html5up-landed/assets/js/breakpoints.min.js"></script>
     <script src="html5up-landed/assets/js/util.js"></script>
     <script src="html5up-landed/assets/js/main.js"></script>
-    <script src="script.js?v=mobile-gallery"></script>
+    <script src="script.js?v=gallery-curated-order"></script>
   </body>
 </html>

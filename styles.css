@@ -9,6 +9,12 @@ body {
   letter-spacing: 0;
 }
 
+h1,
+h2,
+h3 {
+  letter-spacing: 0;
+}
+
 #header {
   background: rgba(23, 24, 32, 0.82);
 }
@@ -36,14 +42,14 @@ body {
 #banner .hero-background {
   background-image:
     linear-gradient(rgba(23, 24, 32, 0.46), rgba(23, 24, 32, 0.58)),
-    url("assets/gallery-current/veidrodistai-06.jpg");
-  background-position: center top, center 8%;
+    url("assets/library/Nuotraukos/Untitled-1.png");
+  background-position: center top, center 46%;
   background-size: cover, cover;
   display: block;
-  height: 126%;
+  height: 100%;
   left: 0;
   position: absolute;
-  top: -26%;
+  top: 0;
   width: 100%;
   z-index: 0;
 }
@@ -59,22 +65,40 @@ body {
   text-align: left;
 }
 
+#banner .content header h2 {
+  font-size: clamp(2.65rem, 5vw, 4.7rem);
+  font-weight: 300;
+  line-height: 1.05;
+}
+
 #banner .content header p {
   max-width: 42rem;
+}
+
+#banner .content header > p:first-of-type {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.2rem;
+  line-height: 1.55;
 }
 
 #banner .actions {
   margin-top: 2.75rem;
 }
 
+.hero-categories {
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 1.02rem !important;
+  line-height: 1.6 !important;
+}
+
 .hero-intro {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.35rem;
+  gap: 1rem;
   max-width: 72rem;
-  margin: 2.4rem 0 0;
-  padding: 1.7rem 0 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  margin: 2rem 0 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .hero-intro h3 {
@@ -83,18 +107,32 @@ body {
 
 .hero-intro p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.95rem;
-  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+  line-height: 1.5;
 }
 
 .eyebrow {
   margin: 0 0 0.8rem;
   color: var(--veidro-gold) !important;
-  font-size: 0.78rem !important;
+  font-size: 0.74rem !important;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.major h2 {
+  font-size: 2.25rem;
+  line-height: 1.18;
+}
+
+.major p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+#order .major h2 {
+  font-size: 2.55rem;
 }
 
 .hero-product {
@@ -188,6 +226,10 @@ input[type="button"] {
   aspect-ratio: 0.78;
 }
 
+.gallery-item:nth-child(-n + 8) {
+  aspect-ratio: 1;
+}
+
 .gallery-item::after,
 .dialog-close::after,
 .dialog-nav::after {
@@ -206,8 +248,20 @@ input[type="button"] {
   transform: scale(1.035);
 }
 
+.gallery-item.is-hidden {
+  display: none;
+}
+
+.gallery-more {
+  margin-top: 2rem;
+}
+
 #order {
   background: #1c1d25;
+}
+
+.contact-actions {
+  margin-top: 2rem;
 }
 
 .contact-list {
@@ -227,6 +281,19 @@ input[type="button"] {
 
 .contact-list a {
   border-bottom-color: rgba(255, 255, 255, 0.35);
+}
+
+.contact-list-simple {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 56rem;
+  margin: 2.7rem auto 0;
+  text-align: center;
+}
+
+.contact-list-simple li {
+  margin: 0;
 }
 
 .gallery-dialog {
@@ -327,18 +394,54 @@ input[type="button"] {
     text-align: center;
   }
 
+  #banner .content header h2 {
+    font-size: 2.35rem;
+    line-height: 1.08;
+  }
+
   #banner .content header p {
     max-width: none;
+  }
+
+  #banner .content header > p:first-of-type {
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   #banner .actions {
     margin-top: 1.6rem;
   }
 
+  .hero-categories {
+    font-size: 0.86rem !important;
+  }
+
   .hero-intro {
     gap: 0.85rem;
     margin-top: 1.45rem;
     padding-top: 1.15rem;
+  }
+
+  .hero-intro p {
+    font-size: 0.82rem;
+  }
+
+  .major h2,
+  #order .major h2 {
+    font-size: 1.75rem;
+  }
+
+  .major p {
+    font-size: 0.95rem;
+  }
+
+  .contact-list-simple {
+    display: block;
+    margin-top: 2.2rem;
+  }
+
+  .contact-list-simple li {
+    margin: 0 0 1.45rem;
   }
 
   .gallery-controls {
@@ -386,8 +489,13 @@ input[type="button"] {
   .gallery-item:nth-child(5n + 1),
   .gallery-item:nth-child(5n + 4) {
     aspect-ratio: 0.82;
+    display: block;
     flex: 0 0 min(82vw, 24rem);
     scroll-snap-align: center;
+  }
+
+  .gallery-more {
+    display: none;
   }
 }
 

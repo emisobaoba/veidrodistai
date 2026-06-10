@@ -16,6 +16,10 @@ if (navToggle && nav) {
 }
 
 const galleryImageIds = [
+  "09",
+  "11",
+  "14",
+  "10",
   "01",
   "02",
   "03",
@@ -24,12 +28,8 @@ const galleryImageIds = [
   "06",
   "07",
   "08",
-  "09",
-  "10",
-  "11",
   "12",
   "13",
-  "14",
   "15",
   "16",
   "18",
@@ -41,7 +41,7 @@ const galleryImageIds = [
 const galleryImages = galleryImageIds.map((id) => {
   return {
     id,
-    src: `assets/gallery-current/veidrodistai-${id}.jpg`,
+    src: id === "01" ? "assets/library/Nuotraukos/Untitled-1.png" : `assets/gallery-current/veidrodistai-${id}.jpg`,
     alt: `Veidrodistai gaminio nuotrauka ${id}`,
   };
 });
@@ -56,6 +56,8 @@ const galleryNext = document.querySelector("[data-gallery-next]");
 const galleryMobilePrev = document.querySelector("[data-gallery-mobile-prev]");
 const galleryMobileNext = document.querySelector("[data-gallery-mobile-next]");
 const galleryMobileCount = document.querySelector("[data-gallery-mobile-count]");
+const galleryMore = document.querySelector("[data-gallery-more]");
+const initialDesktopGalleryCount = 8;
 let activeGalleryIndex = 0;
 let activeMobileGalleryIndex = 0;
 
@@ -117,6 +119,10 @@ if (galleryGrid) {
     button.className = "gallery-item";
     button.type = "button";
 
+    if (index >= initialDesktopGalleryCount) {
+      button.classList.add("is-hidden");
+    }
+
     const img = document.createElement("img");
     img.src = image.src;
     img.alt = image.alt;
@@ -142,11 +148,22 @@ if (galleryGrid) {
   }, { passive: true });
 }
 
+if (galleryMore && galleryImages.length <= initialDesktopGalleryCount) {
+  galleryMore.hidden = true;
+}
+
 galleryClose?.addEventListener("click", closeGallery);
 galleryPrev?.addEventListener("click", () => shiftGallery(-1));
 galleryNext?.addEventListener("click", () => shiftGallery(1));
 galleryMobilePrev?.addEventListener("click", () => scrollMobileGallery(-1));
 galleryMobileNext?.addEventListener("click", () => scrollMobileGallery(1));
+galleryMore?.addEventListener("click", () => {
+  galleryGrid?.querySelectorAll(".gallery-item.is-hidden").forEach((item) => {
+    item.classList.remove("is-hidden");
+  });
+
+  galleryMore.hidden = true;
+});
 
 galleryDialog?.addEventListener("click", (event) => {
   if (event.target === galleryDialog) {
