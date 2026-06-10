@@ -159,6 +159,47 @@ input[type="button"] {
   background: #22242d;
 }
 
+.process-section {
+  background: #20222b;
+}
+
+.process-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 72rem;
+  margin: 2.5rem auto 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  counter-reset: process-step;
+}
+
+.process-list li {
+  position: relative;
+  min-height: 100%;
+  padding: 1.35rem 1.35rem 1.35rem 3.4rem;
+  background: rgba(255, 255, 255, 0.055);
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.65;
+  counter-increment: process-step;
+}
+
+.process-list li::before {
+  content: counter(process-step);
+  position: absolute;
+  top: 1.35rem;
+  left: 1.25rem;
+  width: 1.55rem;
+  height: 1.55rem;
+  border: 1px solid rgba(231, 194, 123, 0.75);
+  color: var(--veidro-gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.55rem;
+  text-align: center;
+}
+
 .about-us-section {
   background: #242630;
 }
@@ -366,6 +407,10 @@ input[type="button"] {
     grid-template-columns: 1fr;
   }
 
+  .process-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -433,6 +478,15 @@ input[type="button"] {
 
   .major p {
     font-size: 0.95rem;
+  }
+
+  .process-list {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+
+  .process-list li {
+    padding: 1.2rem 1.2rem 1.2rem 3.15rem;
   }
 
   .contact-list-simple {
