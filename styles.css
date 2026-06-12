@@ -305,6 +305,25 @@ input[type="button"] {
   margin-top: 2rem;
 }
 
+.quote-form {
+  max-width: 52rem;
+  margin: 2.6rem auto 0;
+  text-align: left;
+}
+
+.quote-form input,
+.quote-form textarea {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.quote-form .button {
+  width: 100%;
+}
+
+.botcheck {
+  display: none !important;
+}
+
 .contact-list {
   margin: 0;
   padding: 0;

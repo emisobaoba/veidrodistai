@@ -13,7 +13,7 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="html5up-landed/assets/css/main.css">
     <noscript><link rel="stylesheet" href="html5up-landed/assets/css/noscript.css"></noscript>
-    <link rel="stylesheet" href="styles.css?v=process-section">
+    <link rel="stylesheet" href="styles.css?v=web3forms-quote">
   </head>
   <body class="is-preload landing">
     <div id="page-wrapper">
@@ -119,6 +119,32 @@
               <li><a href="mailto:info@veidrodistai.lt" class="button">Rašyti el. paštu</a></li>
             </ul>
           </header>
+          <form class="quote-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="b6493fba-9184-4ac7-a688-f808f29c3af5">
+            <input type="hidden" name="subject" value="Nauja užklausa iš Veidrodistai svetainės">
+            <input type="hidden" name="from_name" value="Veidrodistai.lt">
+            <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+            <div class="row gtr-uniform gtr-50">
+              <div class="col-6 col-12-xsmall">
+                <input type="text" name="vardas" autocomplete="name" placeholder="Vardas" required>
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="tel" name="telefonas" autocomplete="tel" placeholder="Telefonas" required>
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="email" name="email" autocomplete="email" placeholder="El. paštas" required>
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="text" name="miestas" autocomplete="address-level2" placeholder="Miestas">
+              </div>
+              <div class="col-12">
+                <textarea name="zinute" rows="5" placeholder="Dydis, forma, apšvietimas, spalvos temperatūra, jungiklio tipas, montavimas ar kiti poreikiai" required></textarea>
+              </div>
+              <div class="col-12">
+                <button class="button primary" type="submit">Siųsti užklausą</button>
+              </div>
+            </div>
+          </form>
           <ul class="contact-list contact-list-simple">
             <li>
               <h3>El. paštas</h3>
