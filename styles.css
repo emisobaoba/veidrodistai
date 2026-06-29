@@ -166,7 +166,7 @@ input[type="button"] {
 .process-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.1rem;
   max-width: 72rem;
   margin: 2.5rem auto 0;
   padding: 0;
@@ -178,26 +178,36 @@ input[type="button"] {
 .process-list li {
   position: relative;
   min-height: 100%;
-  padding: 1.35rem 1.35rem 1.35rem 3.4rem;
-  background: rgba(255, 255, 255, 0.055);
+  padding: 4.45rem 1.35rem 1.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.045);
   color: rgba(255, 255, 255, 0.82);
-  line-height: 1.65;
   counter-increment: process-step;
 }
 
 .process-list li::before {
   content: counter(process-step);
   position: absolute;
-  top: 1.35rem;
-  left: 1.25rem;
-  width: 1.55rem;
-  height: 1.55rem;
-  border: 1px solid rgba(231, 194, 123, 0.75);
+  top: 1.25rem;
+  left: 1.35rem;
   color: var(--veidro-gold);
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.55rem;
-  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.process-list h3 {
+  margin: 0 0 0.65rem;
+  color: #ffffff;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.process-list p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
 .about-us-section {
@@ -505,7 +515,16 @@ input[type="button"] {
   }
 
   .process-list li {
-    padding: 1.2rem 1.2rem 1.2rem 3.15rem;
+    padding: 4.1rem 1.2rem 1.25rem;
+  }
+
+  .process-list li::before {
+    top: 1.15rem;
+    left: 1.2rem;
+  }
+
+  .process-list h3 {
+    font-size: 1rem;
   }
 
   .contact-list-simple {
