@@ -21,8 +21,16 @@ h3 {
 }
 
 #logo a {
+  display: inline-block;
+  line-height: 0;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+#logo a img {
+  display: block;
+  width: auto;
+  height: 2.7rem;
 }
 
 #nav a {
@@ -320,6 +328,18 @@ input[type="button"] {
   font-size: 0.9rem;
 }
 
+.section-brand {
+  margin: 0 0 1.5rem;
+}
+
+.section-brand img {
+  display: block;
+  width: auto;
+  max-width: 12rem;
+  height: 3rem;
+  margin: 0 auto;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -391,6 +411,18 @@ input[type="button"] {
 
 #footer {
   background: #50525e;
+}
+
+#footer .footer-brand {
+  margin: 0 0 1.2rem;
+}
+
+#footer .footer-brand img {
+  display: block;
+  width: auto;
+  max-width: 14rem;
+  height: 3.6rem;
+  margin: 0 auto;
 }
 
 .contact-actions {
@@ -528,6 +560,20 @@ input[type="button"] {
 @media screen and (max-width: 980px) {
   .hero-sample {
     display: none;
+  }
+
+  #logo a img {
+    height: 2.2rem;
+  }
+
+  .section-brand img {
+    max-width: 10rem;
+    height: 2.5rem;
+  }
+
+  #footer .footer-brand img {
+    max-width: 11rem;
+    height: 3rem;
   }
 
   .hero-intro {
