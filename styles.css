@@ -769,6 +769,53 @@ input[type="button"] {
 }
 
 @media screen and (max-width: 736px) {
+  #titleBar {
+    height: 5rem;
+    background: rgba(31, 33, 42, 0.92);
+    box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  #titleBar .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    line-height: 1;
+    padding: 0 4.5rem 0 4.25rem;
+  }
+
+  #titleBar .title a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+  }
+
+  #titleBar .title img {
+    display: block;
+    width: auto;
+    height: 2.9rem;
+  }
+
+  #titleBar .toggle {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  #titleBar .toggle:before {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    background: rgba(228, 76, 101, 0.94);
+    color: rgba(255, 255, 255, 0.88);
+  }
+
+  body.landing #page-wrapper {
+    padding-top: 5rem !important;
+  }
+
   #banner {
     min-height: calc(100vh + 2.5rem);
     text-align: center;
@@ -783,7 +830,7 @@ input[type="button"] {
     margin: 0;
     max-width: none;
     min-height: calc(100vh + 2.5rem);
-    padding: 4.65rem 1.5rem 3.25rem !important;
+    padding: 2.35rem 1.5rem 3.25rem !important;
     text-align: center;
     vertical-align: top;
   }
