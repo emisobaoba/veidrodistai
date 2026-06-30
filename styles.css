@@ -5,6 +5,10 @@
   --veidro-muted: rgba(255, 255, 255, 0.76);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #242631;
   letter-spacing: 0;
@@ -14,6 +18,15 @@ h1,
 h2,
 h3 {
   letter-spacing: 0;
+}
+
+#banner,
+#library,
+#process,
+#apie-mus,
+#order,
+#contact {
+  scroll-margin-top: 5.6rem;
 }
 
 #header {
@@ -840,6 +853,15 @@ input[type="button"] {
     padding-right: 2.4rem;
     font-size: 0.76rem;
     letter-spacing: 0.09em;
+  }
+
+  #banner,
+  #library,
+  #process,
+  #apie-mus,
+  #order,
+  #contact {
+    scroll-margin-top: 6.85rem;
   }
 
   body.landing #page-wrapper {
