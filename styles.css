@@ -974,6 +974,22 @@ input[type="button"] {
     margin: 0 0 1.45rem;
   }
 
+  .contact-actions {
+    margin-top: 0.95rem;
+  }
+
+  .contact-actions li {
+    padding: 0 0.35rem;
+  }
+
+  .contact-actions .button {
+    min-width: 0;
+    height: 2.7em;
+    line-height: 2.7em;
+    padding: 0 1.1rem;
+    font-size: 0.9rem;
+  }
+
   .quote-form {
     max-width: 24rem;
     margin: 0.5rem auto 0;
