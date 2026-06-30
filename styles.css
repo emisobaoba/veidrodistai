@@ -18,6 +18,41 @@ h3 {
 
 #header {
   background: rgba(31, 33, 42, 0.78);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 0 1.4rem;
+  z-index: 10000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+body.landing #header {
+  background: rgba(31, 33, 42, 0.78);
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.18);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#header h1 {
+  position: relative;
+  top: auto;
+  left: auto;
+  height: auto;
+  line-height: 1;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+body.landing #page-wrapper {
+  padding-top: 0;
 }
 
 #logo a {
@@ -30,7 +65,67 @@ h3 {
 #logo a img {
   display: block;
   width: auto;
-  height: 2.7rem;
+  height: 4.6rem;
+}
+
+.header-promo {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 2.55rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(90deg, rgba(228, 76, 101, 0.96), rgba(255, 143, 72, 0.92));
+  box-shadow: 0 0.55rem 1.35rem rgba(228, 76, 101, 0.24);
+}
+
+.header-promo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent 20%, transparent 80%, rgba(255, 255, 255, 0.08));
+  pointer-events: none;
+}
+
+.header-promo-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  will-change: transform;
+  animation: header-promo-marquee 16s linear infinite;
+}
+
+.header-promo-track span {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 3rem;
+  color: #ffffff;
+  font-size: 0.94rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 0 0.08em 0.2em rgba(0, 0, 0, 0.18);
+}
+
+@keyframes header-promo-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+#header nav {
+  position: relative;
+  right: auto;
+  top: auto;
+  flex: 0 0 auto;
 }
 
 #nav a {
@@ -41,6 +136,7 @@ h3 {
 #banner {
   background-image: none;
   overflow: hidden;
+  min-height: calc(100vh + 4.5rem);
 }
 
 #banner:after {
@@ -69,7 +165,7 @@ h3 {
   box-sizing: border-box;
   width: min(88em, calc(100% - 4em));
   max-width: calc(100% - 4em);
-  min-height: 100vh;
+  min-height: calc(100vh + 4.5rem);
   margin: 0 auto;
   padding-top: 7.35rem;
   padding-bottom: 5.15rem;
@@ -211,6 +307,15 @@ h3 {
 
 #order .major h2 {
   font-size: 2.25rem;
+  margin-bottom: 1.55rem;
+}
+
+#order .major p {
+  margin-bottom: 0.85rem;
+}
+
+#order header.major {
+  margin-bottom: 1.45rem;
 }
 
 .hero-product {
@@ -329,14 +434,14 @@ input[type="button"] {
 }
 
 .section-brand {
-  margin: 0 0 1.5rem;
+  margin: 0 0 0.85rem;
 }
 
 .section-brand img {
   display: block;
   width: auto;
-  max-width: 12rem;
-  height: 3rem;
+  max-width: 24.48rem;
+  height: 4.7rem;
   margin: 0 auto;
 }
 
@@ -407,10 +512,17 @@ input[type="button"] {
 
 #order {
   background: linear-gradient(180deg, #454753 0%, #50525e 100%);
+  padding: 3rem 0 2.4rem;
+}
+
+#contact {
+  background: #50525e;
+  padding: 2.2rem 0 2.8rem;
 }
 
 #footer {
   background: #50525e;
+  padding: 2.2rem 0 2.8rem;
 }
 
 #footer .footer-brand {
@@ -420,23 +532,23 @@ input[type="button"] {
 #footer .footer-brand img {
   display: block;
   width: auto;
-  max-width: 14rem;
-  height: 3.6rem;
+  max-width: 25.84rem;
+  height: 6.52rem;
   margin: 0 auto;
 }
 
 .contact-actions {
-  margin-top: 2rem;
+  margin-top: 1.15rem;
 }
 
 .quote-form {
-  max-width: 38rem;
-  margin: 2.35rem auto 0;
+  max-width: 36rem;
+  margin: 0.35rem auto 0;
   text-align: left;
 }
 
 .quote-form .row {
-  row-gap: 0.8rem;
+  row-gap: 0.35rem;
 }
 
 .quote-form input,
@@ -445,8 +557,23 @@ input[type="button"] {
   font-size: 1rem;
 }
 
+.quote-form input[type="text"],
+.quote-form input[type="tel"],
+.quote-form input[type="email"] {
+  height: 2.15em;
+}
+
+.quote-form textarea {
+  min-height: 5.1rem;
+  padding-top: 0.45em;
+  padding-bottom: 0.45em;
+}
+
 .quote-form .button {
   width: 100%;
+  height: 2.7em;
+  line-height: 2.7em;
+  padding: 0;
 }
 
 .botcheck {
@@ -479,17 +606,41 @@ input[type="button"] {
   line-height: 1.45;
 }
 
+.contact-list-simple span {
+  display: inline-block;
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
 .contact-list-simple {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
   max-width: 56rem;
-  margin: 2.7rem auto 0;
+  margin: 0 auto;
   text-align: center;
 }
 
 .contact-list-simple li {
   margin: 0;
+}
+
+.contact-list-simple .contact-address {
+  flex-basis: 100%;
+  margin-top: -0.1rem;
+}
+
+.contact-brand {
+  margin-top: 2.6rem;
+}
+
+.contact-brand img {
+  display: block;
+  width: auto;
+  max-width: 24rem;
+  height: 6.2rem;
+  margin: 0 auto;
 }
 
 .gallery-dialog {
@@ -558,22 +709,44 @@ input[type="button"] {
 }
 
 @media screen and (max-width: 980px) {
+  #header {
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
   .hero-sample {
     display: none;
   }
 
+  body.landing #page-wrapper {
+    padding-top: 0;
+  }
+
   #logo a img {
-    height: 2.2rem;
+    height: 3.5rem;
+  }
+
+  .header-promo {
+    display: none;
   }
 
   .section-brand img {
-    max-width: 10rem;
-    height: 2.5rem;
+    max-width: 19.04rem;
+    height: 4.88rem;
   }
 
   #footer .footer-brand img {
-    max-width: 11rem;
-    height: 3rem;
+    max-width: 20.4rem;
+    height: 5.32rem;
+  }
+
+  .contact-brand img {
+    max-width: 20rem;
+    height: 5.2rem;
+  }
+
+  #contact {
+    padding: 1.9rem 0 2.4rem;
   }
 
   .hero-intro {
@@ -597,7 +770,7 @@ input[type="button"] {
 
 @media screen and (max-width: 736px) {
   #banner {
-    min-height: auto;
+    min-height: calc(100vh + 2.5rem);
     text-align: center;
   }
 
@@ -609,7 +782,7 @@ input[type="button"] {
     display: block;
     margin: 0;
     max-width: none;
-    min-height: 0;
+    min-height: calc(100vh + 2.5rem);
     padding: 4.65rem 1.5rem 3.25rem !important;
     text-align: center;
     vertical-align: top;
