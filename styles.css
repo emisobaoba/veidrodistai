@@ -111,6 +111,10 @@ body.landing #page-wrapper {
   text-shadow: 0 0.08em 0.2em rgba(0, 0, 0, 0.18);
 }
 
+.mobile-header-promo {
+  display: none;
+}
+
 @keyframes header-promo-marquee {
   from {
     transform: translateX(0);
@@ -812,12 +816,38 @@ input[type="button"] {
     color: rgba(255, 255, 255, 0.88);
   }
 
+  .mobile-header-promo {
+    position: fixed;
+    top: 4.35rem;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(90deg, rgba(228, 76, 101, 0.96), rgba(255, 143, 72, 0.92));
+    box-shadow: 0 0.2rem 0.75rem rgba(0, 0, 0, 0.14);
+    z-index: 10000;
+  }
+
+  .mobile-header-promo .header-promo-track {
+    animation-duration: 14s;
+  }
+
+  .mobile-header-promo .header-promo-track span {
+    padding-right: 2.4rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.09em;
+  }
+
   body.landing #page-wrapper {
-    padding-top: 4.35rem !important;
+    padding-top: 6.35rem !important;
   }
 
   #banner {
-    min-height: calc(100svh - 4.35rem);
+    min-height: calc(100svh - 6.35rem);
     text-align: center;
   }
 
@@ -830,7 +860,7 @@ input[type="button"] {
     margin: 0 auto;
     width: min(100%, calc(100% - 1.35rem));
     max-width: none;
-    min-height: calc(100svh - 4.35rem);
+    min-height: calc(100svh - 6.35rem);
     padding: 1.45rem 0.75rem 2.1rem !important;
     text-align: center;
     vertical-align: top;
