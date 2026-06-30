@@ -15,6 +15,60 @@ if (navToggle && nav) {
   });
 }
 
+function getScrollOffset() {
+  const mobileTitleBar = document.querySelector("#titleBar");
+  const mobilePromo = document.querySelector(".mobile-header-promo");
+  const desktopHeader = document.querySelector("#header");
+  const isMobile = window.matchMedia("(max-width: 736px)").matches;
+
+  if (isMobile) {
+    const titleBarHeight = mobileTitleBar instanceof HTMLElement ? mobileTitleBar.offsetHeight : 0;
+    const promoHeight = mobilePromo instanceof HTMLElement ? mobilePromo.offsetHeight : 0;
+    return titleBarHeight + promoHeight + 12;
+  }
+
+  return desktopHeader instanceof HTMLElement ? desktopHeader.offsetHeight + 12 : 0;
+}
+
+document.addEventListener("click", (event) => {
+  const target = event.target;
+
+  if (!(target instanceof Element)) {
+    return;
+  }
+
+  const anchor = target.closest('a[href^="#"]');
+
+  if (!(anchor instanceof HTMLAnchorElement)) {
+    return;
+  }
+
+  const href = anchor.getAttribute("href");
+
+  if (!href || href === "#" || href === "#navPanel") {
+    return;
+  }
+
+  const section = document.querySelector(href);
+
+  if (!(section instanceof HTMLElement)) {
+    return;
+  }
+
+  event.preventDefault();
+
+  const top = section.getBoundingClientRect().top + window.scrollY - getScrollOffset();
+
+  window.scrollTo({
+    top: Math.max(0, top),
+    behavior: "smooth",
+  });
+
+  if (window.history && typeof window.history.pushState === "function") {
+    window.history.pushState(null, "", href);
+  }
+});
+
 const galleryImageIds = [
   "09",
   "11",
