@@ -965,6 +965,43 @@ input[type="button"] {
     margin: 0 0 1.45rem;
   }
 
+  .quote-form {
+    max-width: 24rem;
+    margin: 0.5rem auto 0;
+    padding: 0 0.35rem;
+  }
+
+  .quote-form .row {
+    margin: 0;
+    row-gap: 0.55rem;
+  }
+
+  .quote-form .row > .col-6,
+  .quote-form .row > .col-12 {
+    padding: 0 0.15rem;
+  }
+
+  .quote-form input,
+  .quote-form textarea {
+    font-size: 0.96rem;
+  }
+
+  .quote-form input[type="text"],
+  .quote-form input[type="tel"],
+  .quote-form input[type="email"] {
+    height: 2.5em;
+  }
+
+  .quote-form textarea {
+    min-height: 5.8rem;
+  }
+
+  .quote-form .button {
+    height: 3.35em;
+    line-height: 3.35em;
+    font-size: 1rem;
+  }
+
   .gallery-controls {
     display: flex;
     align-items: center;
