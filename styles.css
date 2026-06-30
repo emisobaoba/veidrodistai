@@ -904,24 +904,24 @@ input[type="button"] {
 
   .hero-intro {
     grid-template-columns: 1fr;
-    gap: 0.55rem;
-    max-width: 28rem;
-    margin: 1.3rem auto 0;
+    gap: 0.45rem;
+    max-width: 25rem;
+    margin: 1.05rem auto 0;
   }
 
   .hero-intro p {
     align-items: center;
-    gap: 0.55rem;
-    padding: 0.72rem 0.8rem;
-    font-size: 0.9rem;
-    line-height: 1.32;
+    gap: 0.42rem;
+    padding: 0.58rem 0.7rem;
+    font-size: 0.84rem;
+    line-height: 1.24;
     text-align: center;
   }
 
   .hero-intro .icon {
-    width: 1.9rem;
-    height: 1.9rem;
-    font-size: 1rem;
+    width: 1.65rem;
+    height: 1.65rem;
+    font-size: 0.9rem;
   }
 
   .major h2,
@@ -935,20 +935,29 @@ input[type="button"] {
 
   .process-list {
     grid-template-columns: 1fr;
-    margin-top: 2rem;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
   }
 
   .process-list li {
-    padding: 4.1rem 1.2rem 1.25rem;
+    padding: 3.35rem 1rem 0.95rem;
   }
 
   .process-list li::before {
-    top: 1.15rem;
-    left: 1.2rem;
+    top: 0.85rem;
+    left: 1rem;
+    font-size: 1.45rem;
   }
 
   .process-list h3 {
-    font-size: 1.12rem;
+    margin-bottom: 0.45rem;
+    font-size: 0.98rem;
+    line-height: 1.28;
+  }
+
+  .process-list p {
+    font-size: 0.9rem;
+    line-height: 1.42;
   }
 
   .about-gallery {
