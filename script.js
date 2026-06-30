@@ -15,6 +15,68 @@ if (navToggle && nav) {
   });
 }
 
+function getScrollTargetTop(section) {
+  const mobileTitleBar = document.querySelector("#titleBar");
+  const mobilePromo = document.querySelector(".mobile-header-promo");
+  const desktopHeader = document.querySelector("#header");
+  const isMobile = window.matchMedia("(max-width: 736px)").matches;
+  const baseOffset = isMobile
+    ? (mobileTitleBar instanceof HTMLElement ? mobileTitleBar.offsetHeight : 0) +
+      (mobilePromo instanceof HTMLElement ? mobilePromo.offsetHeight : 0) +
+      8
+    : (desktopHeader instanceof HTMLElement ? desktopHeader.offsetHeight : 0) + 8;
+  const orderAdjustment = section.id === "order" ? (isMobile ? 34 : 48) : 0;
+
+  return Math.max(0, section.getBoundingClientRect().top + window.scrollY - baseOffset + orderAdjustment);
+}
+
+function smoothScrollTo(top, duration = 460) {
+  const start = window.scrollY;
+  const distance = top - start;
+  const startTime = performance.now();
+
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  function step(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeOutCubic(progress);
+
+    window.scrollTo(0, start + distance * eased);
+
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  }
+
+  window.requestAnimationFrame(step);
+}
+
+document.querySelectorAll('#header a[href^="#"], #banner a[href^="#"], .goto-next[href^="#"], #titleBar .title a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (event) => {
+    const href = anchor.getAttribute("href");
+
+    if (!href || href === "#") {
+      return;
+    }
+
+    const section = document.querySelector(href);
+
+    if (!(section instanceof HTMLElement)) {
+      return;
+    }
+
+    event.preventDefault();
+    smoothScrollTo(getScrollTargetTop(section));
+
+    if (window.history && typeof window.history.pushState === "function") {
+      window.history.pushState(null, "", href);
+    }
+  });
+});
+
 const galleryImageIds = [
   "09",
   "11",
