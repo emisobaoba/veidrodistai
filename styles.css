@@ -770,7 +770,7 @@ input[type="button"] {
 
 @media screen and (max-width: 736px) {
   #titleBar {
-    height: 5rem;
+    height: 4.35rem;
     background: rgba(31, 33, 42, 0.92);
     box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(10px);
@@ -781,9 +781,9 @@ input[type="button"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 5rem;
+    height: 4.35rem;
     line-height: 1;
-    padding: 0 4.5rem 0 4.25rem;
+    padding: 0 4rem 0 3.75rem;
   }
 
   #titleBar .title a {
@@ -796,28 +796,28 @@ input[type="button"] {
   #titleBar .title img {
     display: block;
     width: auto;
-    height: 2.9rem;
+    height: 3.12rem;
   }
 
   #titleBar .toggle {
-    height: 5rem;
-    width: 5rem;
+    height: 4.35rem;
+    width: 4.35rem;
   }
 
   #titleBar .toggle:before {
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
+    height: 4.35rem;
+    width: 4.35rem;
+    line-height: 4.35rem;
     background: rgba(228, 76, 101, 0.94);
     color: rgba(255, 255, 255, 0.88);
   }
 
   body.landing #page-wrapper {
-    padding-top: 5rem !important;
+    padding-top: 4.35rem !important;
   }
 
   #banner {
-    min-height: calc(100svh - 5rem);
+    min-height: calc(100svh - 4.35rem);
     text-align: center;
   }
 
@@ -830,7 +830,7 @@ input[type="button"] {
     margin: 0 auto;
     width: min(100%, calc(100% - 1.35rem));
     max-width: none;
-    min-height: calc(100svh - 5rem);
+    min-height: calc(100svh - 4.35rem);
     padding: 1.45rem 0.75rem 2.1rem !important;
     text-align: center;
     vertical-align: top;
