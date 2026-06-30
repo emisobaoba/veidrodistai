@@ -113,23 +113,8 @@ function scrollMobileGallery(direction) {
 }
 
 if (galleryGrid) {
-  galleryImages.forEach((image, index) => {
-    const button = document.createElement("button");
-    button.className = "gallery-item";
-    button.type = "button";
-
-    if (index >= initialDesktopGalleryCount) {
-      button.classList.add("is-hidden");
-    }
-
-    const img = document.createElement("img");
-    img.src = image.src;
-    img.alt = image.alt;
-    img.loading = "lazy";
-
-    button.append(img);
+  galleryGrid.querySelectorAll(".gallery-item").forEach((button, index) => {
     button.addEventListener("click", () => openGallery(index));
-    galleryGrid.append(button);
   });
 
   updateMobileGallery(0);
