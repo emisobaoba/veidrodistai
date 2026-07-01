@@ -165,7 +165,7 @@ body.landing #page-wrapper {
   background-image:
     linear-gradient(90deg, rgba(14, 15, 21, 0.78) 0%, rgba(14, 15, 21, 0.62) 42%, rgba(14, 15, 21, 0.2) 72%),
     linear-gradient(rgba(23, 24, 32, 0.18), rgba(23, 24, 32, 0.32)),
-    url("assets/library/Nuotraukos/Untitled-1.png");
+    url("assets/hero-untitled-1.jpg");
   background-position: center top, center top, center 46%;
   background-size: cover, cover, cover;
   display: block;

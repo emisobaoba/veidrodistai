@@ -102,7 +102,7 @@ const galleryImageIds = [
 const galleryImages = galleryImageIds.map((id) => {
   return {
     id,
-    src: id === "01" ? "assets/library/Nuotraukos/Untitled-1.png" : `assets/gallery-current/veidrodistai-${id}.jpg`,
+    src: id === "01" ? "assets/gallery-untitled-1.jpg" : `assets/gallery-current/veidrodistai-${id}.jpg`,
     alt: `Veidrodistai gaminio nuotrauka ${id}`,
   };
 });
