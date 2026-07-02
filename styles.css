@@ -1003,18 +1003,31 @@ input[type="button"] {
   }
 
   .contact-actions {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    width: auto !important;
     margin-top: 0.95rem;
   }
 
   .contact-actions li {
-    padding: 0 0.35rem;
+    flex: 0 0 auto;
+    width: auto !important;
+    padding: 0;
   }
 
   .contact-actions .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
     min-width: 0;
+    min-width: 9.5rem;
     height: 2.7em;
     line-height: 2.7em;
-    padding: 0 1.1rem;
+    padding: 0 0.95rem;
     font-size: 0.9rem;
   }
 
