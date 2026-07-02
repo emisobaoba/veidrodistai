@@ -812,7 +812,7 @@ input[type="button"] {
   #titleBar .title img {
     display: block;
     width: auto;
-    height: 3.12rem;
+    height: 3.43rem;
   }
 
   #titleBar .toggle {
@@ -885,7 +885,7 @@ input[type="button"] {
     width: min(100%, calc(100% - 1.35rem));
     max-width: none;
     min-height: calc(100svh - 6.35rem);
-    padding: 1.45rem 0.75rem 2.1rem !important;
+    padding: 1.1rem 0.65rem 1.55rem !important;
     text-align: center;
     vertical-align: top;
   }
@@ -900,9 +900,9 @@ input[type="button"] {
   }
 
   #banner .content header h2 {
-    font-size: 2.1rem;
+    font-size: 1.92rem;
     line-height: 1.05;
-    margin-bottom: 0.95rem;
+    margin-bottom: 0.7rem;
   }
 
   #banner .content header p {
@@ -910,42 +910,46 @@ input[type="button"] {
   }
 
   .hero-subtitle {
-    font-size: 1rem !important;
-    line-height: 1.32 !important;
+    font-size: 0.92rem !important;
+    line-height: 1.24 !important;
   }
 
   #banner .actions {
-    margin-top: 1.35rem;
+    margin-top: 0.95rem;
   }
 
   .hero-categories {
     display: inline-block;
-    margin-top: 0.75rem !important;
-    padding: 0.45rem 0.7rem;
-    font-size: 0.88rem !important;
-    line-height: 1.35 !important;
+    margin-top: 0.55rem !important;
+    padding: 0.35rem 0.55rem;
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
   }
 
   .hero-intro {
-    grid-template-columns: 1fr;
-    gap: 0.45rem;
-    max-width: 25rem;
-    margin: 1.05rem auto 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.38rem;
+    max-width: 100%;
+    margin: 0.8rem auto 0;
   }
 
   .hero-intro p {
     align-items: center;
-    gap: 0.42rem;
-    padding: 0.58rem 0.7rem;
-    font-size: 0.84rem;
-    line-height: 1.24;
+    gap: 0.32rem;
+    padding: 0.46rem 0.48rem;
+    font-size: 0.72rem;
+    line-height: 1.16;
     text-align: center;
   }
 
   .hero-intro .icon {
-    width: 1.65rem;
-    height: 1.65rem;
-    font-size: 0.9rem;
+    width: 1.35rem;
+    height: 1.35rem;
+    font-size: 0.74rem;
+  }
+
+  .hero-intro p:last-child {
+    grid-column: 1 / -1;
   }
 
   .major h2,
