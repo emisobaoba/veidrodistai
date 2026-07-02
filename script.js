@@ -54,7 +54,7 @@ function smoothScrollTo(top, duration = 460) {
   window.requestAnimationFrame(step);
 }
 
-document.querySelectorAll('#header a[href^="#"], #banner a[href^="#"], .goto-next[href^="#"], #titleBar .title a[href^="#"]').forEach((anchor) => {
+document.querySelectorAll('#header a[href^="#"], #banner a[href^="#"], .goto-next[href^="#"], #titleBar .title a[href^="#"], .mobile-header-promo[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", (event) => {
     const href = anchor.getAttribute("href");
 
