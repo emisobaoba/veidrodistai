@@ -16,15 +16,15 @@ h3 {
   letter-spacing: 0;
 }
 
-#banner,
-#library,
+#pradzia,
+#gaminiai,
 #duk,
 #apie-mus,
-#contact {
+#kontaktai {
   scroll-margin-top: 5.6rem;
 }
 
-#order {
+#gauti-pasiulyma {
   scroll-margin-top: 3.2rem;
 }
 
@@ -908,15 +908,15 @@ input[type="button"] {
     letter-spacing: 0.09em;
   }
 
-  #banner,
-  #library,
+  #pradzia,
+  #gaminiai,
   #duk,
   #apie-mus,
-  #contact {
+  #kontaktai {
     scroll-margin-top: 6.85rem;
   }
 
-  #order {
+  #gauti-pasiulyma {
     scroll-margin-top: 4.6rem;
   }
 

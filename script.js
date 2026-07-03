@@ -25,7 +25,7 @@ function getScrollTargetTop(section) {
       (mobilePromo instanceof HTMLElement ? mobilePromo.offsetHeight : 0) +
       8
     : (desktopHeader instanceof HTMLElement ? desktopHeader.offsetHeight : 0) + 8;
-  const orderAdjustment = section.id === "order" ? (isMobile ? 34 : 48) : 0;
+  const orderAdjustment = section.id === "gauti-pasiulyma" ? (isMobile ? 34 : 48) : 0;
 
   return Math.max(0, section.getBoundingClientRect().top + window.scrollY - baseOffset + orderAdjustment);
 }
@@ -54,7 +54,7 @@ function smoothScrollTo(top, duration = 460) {
   window.requestAnimationFrame(step);
 }
 
-document.querySelectorAll('#header a[href^="#"], #banner a[href^="#"], .goto-next[href^="#"], #titleBar .title a[href^="#"], .mobile-header-promo[href^="#"]').forEach((anchor) => {
+document.querySelectorAll('#header a[href^="#"], #pradzia a[href^="#"], .goto-next[href^="#"], #titleBar .title a[href^="#"], .mobile-header-promo[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", (event) => {
     const href = anchor.getAttribute("href");
 
