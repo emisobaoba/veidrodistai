@@ -322,16 +322,16 @@ body.landing #page-wrapper {
   line-height: 1.68;
 }
 
-#order .major h2 {
+#gauti-pasiulyma .major h2 {
   font-size: 2.25rem;
   margin-bottom: 1.55rem;
 }
 
-#order .major p {
+#gauti-pasiulyma .major p {
   margin-bottom: 0.85rem;
 }
 
-#order header.major {
+#gauti-pasiulyma header.major {
   margin-bottom: 1.45rem;
 }
 
@@ -576,12 +576,12 @@ input[type="button"] {
   margin-top: 2rem;
 }
 
-#order {
+#gauti-pasiulyma {
   background: linear-gradient(180deg, #454753 0%, #50525e 100%);
   padding: 3rem 0 2.4rem;
 }
 
-#contact {
+#kontaktai {
   background: #50525e;
   padding: 2.2rem 0 2.8rem;
 }
@@ -811,7 +811,7 @@ input[type="button"] {
     height: 5.2rem;
   }
 
-  #contact {
+  #kontaktai {
     padding: 1.9rem 0 2.4rem;
   }
 
@@ -1008,7 +1008,7 @@ input[type="button"] {
   }
 
   .major h2,
-  #order .major h2 {
+  #gauti-pasiulyma .major h2 {
     font-size: 1.75rem;
   }
 
