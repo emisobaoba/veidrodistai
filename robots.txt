@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://veidrodistai.lt/sitemap.xml
+Sitemap: https://www.veidrodistai.lt/sitemap.xml
