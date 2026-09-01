@@ -149,19 +149,20 @@ body.landing #page-wrapper {
   letter-spacing: 0.05em;
 }
 
-#banner {
+#pradzia {
   background-image: none;
   overflow: hidden;
   min-height: calc(100vh + 4.5rem);
+  position: relative;
 }
 
-#banner:after {
+#pradzia:after {
   opacity: 0.14;
   pointer-events: none;
   z-index: 1;
 }
 
-#banner .hero-background {
+#pradzia .hero-background {
   background-image:
     linear-gradient(90deg, rgba(14, 15, 21, 0.78) 0%, rgba(14, 15, 21, 0.62) 42%, rgba(14, 15, 21, 0.2) 72%),
     linear-gradient(rgba(23, 24, 32, 0.18), rgba(23, 24, 32, 0.32)),
@@ -177,7 +178,7 @@ body.landing #page-wrapper {
   z-index: 0;
 }
 
-#banner .content {
+#pradzia .content {
   box-sizing: border-box;
   width: min(88em, calc(100% - 4em));
   max-width: calc(100% - 4em);
@@ -214,17 +215,17 @@ body.landing #page-wrapper {
   mask-image: radial-gradient(circle at center, #000 68%, rgba(0, 0, 0, 0.92) 84%, transparent 100%);
 }
 
-#banner .content header {
+#pradzia .content header {
   display: flex;
   min-height: calc(100vh - 12.5rem);
   flex-direction: column;
-  width: calc(100% - clamp(9.75rem, 12.5vw, 11.75rem));
+  width: calc(100% - clamp(13.5rem, 17vw, 16rem));
   max-width: 68rem;
   text-align: left;
 }
 
-#banner .content header h1,
-#banner .content header h2 {
+#pradzia .content header h1,
+#pradzia .content header h2 {
   max-width: 64rem;
   margin-bottom: 1.65rem;
   color: #ffffff;
@@ -234,7 +235,7 @@ body.landing #page-wrapper {
   text-shadow: 0 0.12em 0.5em rgba(0, 0, 0, 0.58);
 }
 
-#banner .content header p {
+#pradzia .content header p {
   max-width: 56rem;
 }
 
@@ -246,7 +247,7 @@ body.landing #page-wrapper {
   text-shadow: 0 0.1em 0.45em rgba(0, 0, 0, 0.56);
 }
 
-#banner .actions {
+#pradzia .actions {
   margin-top: clamp(2.8rem, 6vh, 4.6rem);
 }
 
@@ -924,16 +925,16 @@ input[type="button"] {
     padding-top: 6.35rem !important;
   }
 
-  #banner {
+  #pradzia {
     min-height: calc(100svh - 6.35rem);
     text-align: center;
   }
 
-  #banner::before {
+  #pradzia::before {
     display: none;
   }
 
-  #banner .content {
+  #pradzia .content {
     display: block;
     margin: 0 auto;
     width: min(100%, calc(100% - 1.35rem));
@@ -944,7 +945,7 @@ input[type="button"] {
     vertical-align: top;
   }
 
-  #banner .content header {
+  #pradzia .content header {
     display: block;
     min-height: 0;
     width: 100%;
@@ -953,14 +954,14 @@ input[type="button"] {
     text-align: center;
   }
 
-  #banner .content header h1,
-  #banner .content header h2 {
+  #pradzia .content header h1,
+  #pradzia .content header h2 {
     font-size: 1.92rem;
     line-height: 1.05;
     margin-bottom: 0.7rem;
   }
 
-  #banner .content header p {
+  #pradzia .content header p {
     max-width: none;
   }
 
@@ -969,7 +970,7 @@ input[type="button"] {
     line-height: 1.24 !important;
   }
 
-  #banner .actions {
+  #pradzia .actions {
     margin-top: 0.95rem;
   }
 
